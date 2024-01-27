@@ -1,0 +1,15 @@
+import random
+
+# Prompt user to specify the desired length of the password
+password_length = int(input("Enter the desired length of the password: "))
+
+# Define the character set
+character_set = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*"
+
+# Generate the password
+password = ""
+for i in range(password_length):
+    password += character_set[random.randint(0, len(character_set))]
+
+# Display the password
+print("Your generated password is:", password)
